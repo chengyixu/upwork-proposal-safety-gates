@@ -19,3 +19,7 @@ python3 -m unittest -v
 ```
 
 No private data, credentials, customer data, or target URLs should be included in fixtures or examples.
+
+## Contract delivery acceptance pack
+
+`acceptance_pack.py SCOPE_FILE` generates a handoff checklist from explicit scope lines only. It is offline and does not infer client requirements.

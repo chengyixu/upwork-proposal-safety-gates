@@ -20,3 +20,9 @@ class GateTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+class AcceptancePackTests(unittest.TestCase):
+    def test_acceptance_pack_explicit_scope_only(self):
+        from acceptance_pack import make_pack
+        self.assertIn("Handoff record", make_pack(["API health endpoint"]))
+        self.assertTrue(make_pack([]).startswith("BLOCK:"))
